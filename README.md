@@ -1,73 +1,163 @@
-# React Props
+# React Props Playground
 
-React Props
+A small **React + TypeScript + Vite** project demonstrating important **React component patterns and props usage**.
 
-# React + TypeScript + Vite
+This project showcases core React concepts including:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Basic Props
+- Children Props
+- Complex Props
+- Ref Props
+- Context API (Theme Toggler)
 
-Currently, two official plugins are available:
+Built with **React, TypeScript, TailwindCSS, and Vite**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- TailwindCSS
+- React Context API
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Project Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+| Feature        | Description                                             |
+| -------------- | ------------------------------------------------------- |
+| Basic Props    | Passing primitive props like strings, numbers, booleans |
+| Children Props | Passing nested JSX inside components                    |
+| Complex Props  | Passing objects and arrays as props                     |
+| Ref Props      | DOM interaction using `useRef` and `forwardRef`         |
+| Theme Context  | Global theme using React Context API                    |
+
+---
+
+# Screenshots
+
+## Basic Props
+
+Demonstrates how simple values and event handlers can be passed to reusable components.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/AyushPoojariUCD/react-props/main/src/assets/basic-props.JPG" width="800"/>
+</p>
+
+---
+
+## Children Props
+
+Shows how React components can accept nested JSX using the `children` prop.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/AyushPoojariUCD/react-props/main/src/assets/children-props.JPG" width="800"/>
+</p>
+
+---
+
+## Complex Props
+
+Demonstrates passing structured data such as objects and arrays to components.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/AyushPoojariUCD/react-props/main/src/assets/complex-props.JPG" width="800"/>
+</p>
+
+---
+
+## Ref Props
+
+Shows how to interact with DOM elements using `useRef` and `forwardRef`.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/AyushPoojariUCD/react-props/main/src/assets/ref-props.JPG" width="800"/>
+</p>
+
+---
+
+## Theme Context
+
+Demonstrates global theme management using the React Context API.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/AyushPoojariUCD/react-props/main/src/assets/theme-context.JPG" width="800"/>
+</p>
+
+---
+
+# Installation
+
+## Clone the repository
+
+```bash
+git clone https://github.com/AyushPoojariUCD/react-props.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Navigate into the project
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+cd react-props
 ```
+
+## Install dependencies
+
+```bash
+npm install
+```
+
+## Run development server
+
+```bash
+npm run dev
+```
+
+## Production Build
+
+`Create production build`
+
+```bash
+npm run build
+```
+
+## Preview production build locally
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src
+ ├── assets
+ │    ├── basic-props.JPG
+ │    ├── children-props.JPG
+ │    ├── complex-props.JPG
+ │    ├── ref-props.JPG
+ │    └── theme-context.JPG
+ │
+ ├── components
+ │    ├── BasicProps.tsx
+ │    ├── ChildrenProps.tsx
+ │    ├── ComplexProps.tsx
+ │    ├── RefProps.tsx
+ │    └── ThemeToggler.tsx
+ │
+ ├── store
+ │    └── ThemeContext.tsx
+ │
+ └── App.tsx
+```
+
+Concepts Demonstrated
+Concept Description
+Props Passing data between components
+Children Rendering nested JSX
+Complex Props Passing objects and arrays
+Refs Direct DOM access
+Context API Global state management
+
+---
